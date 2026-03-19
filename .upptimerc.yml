@@ -1,31 +1,30 @@
 # Change these first
-owner: bitsfdb # Your GitHub organization or username, where this repository lives
-repo: RLidentityStatus # The name of this repository
+owner: bitsfdb 
+repo: RLidentityStatus 
 
 sites:
   - name: RLidentityWeb
     url: https://rlidentity.me
   - name: RLidentityAPI
-    url:: api.rlidentity.me/health
+    # fix: removed double colon and added https://
+    url: https://api.rlidentity.me/health
     expectedStatusCodes:
-     - 200
+      - 200
+
 status-website:  
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
   cname: status.rlidentity.me
-  # baseUrl: /your-repo-name
+  # baseUrl: /RLidentityStatus
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: upptime
+  name: RLidentity Status
   introTitle: "hi there! are all systems **operational** at the moment? "
   introMessage: hey, check us out on our [Discord!](https://rlidentity.me/discord)
   navbar:
     - title: Status
       href: /
     - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+      href: https://github.com/bitsfdb/RLidentityStatus
 
-  notifications:
-    - type: discord
-      webhookUrl: $DISCORD_WEBHOOK_URL
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuraton
+# move notifications out of status-website block
+notifications:
+  - type: discord
+    webhookUrl: $DISCORD_WEBHOOK_URL
