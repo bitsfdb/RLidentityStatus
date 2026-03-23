@@ -33,6 +33,8 @@
     "timeWeek": 404,
     "timeMonth": 404,
     "timeYear": 404,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-03-23": 0
+    }
   }
 ]
