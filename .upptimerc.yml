@@ -7,7 +7,7 @@ sites:
     url: https://rlidentity.me
   - name: RLidentityAPI
     # fix: removed double colon and added https://
-    url: https://api.rlidentity.me/health
+    url: https://api.rlidentity.me/api/health
     expectedStatusCodes:
       - 200
 
